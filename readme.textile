@@ -1,0 +1,57 @@
+h1. Svpply
+
+p. A Node.js wrapper for the "Svpply API":https://developer.svpply.com. Right now there is only coverage for non-authenticated calls. Check out the Svpply API "docs":https://developer.svpply.com as well.
+
+h2. Installation
+
+h3. Installing npm (Node Package Manager)
+
+pre. curl http://npmjs.org/install.sh | sh
+
+h3. Installing Svpply
+
+pre. $ [sudo] npm install svpply
+
+h2. Useage
+
+p. This interface to the Svpply API is meant to be semantically similar to way Svpply's API is organized. There are 4 main categories: Products, Users, Collections, Shop.
+
+<pre>
+  var svpply = require('svpply');  // require the svpply
+  var api = new svpply();  // setup svpply object
+
+  api.products.show(100, callback); // Retrieves a product object.
+  api.products.find({"query": "shoes"}, callback);  // 
+  api.products.collections(100, callback);  // Retrieves the collections that include the specified product.
+  api.products.users(100, callback);  // Retrieves the users that want the specified product.
+  api.products.comments(100, callback);  // Lists the comments on the specified product.
+
+  api.users.show(100, callback);  // Retrieves a user object.
+  api.users.find({"query" : "jonathan", callback});
+  api.users.wants(100, callback);  // Retrieves the products a user has "wanted".
+  api.users.wanted(100, 200,  callback);  // Retrieves the specified product if it is wanted by the specified user.
+  api.users.owns(100, callback);  // Retrieves the products a user has marked as owned.
+  api.users.owned(100, 200, callback);  // Retrieves the specified product if it is owned by the specified user.
+  api.users.following(100, callback); // Retrieves the users that the specified user is following.
+  api.users.isFollowingUser(100, 200, callback);  // Retrieves the second specified user if he/she is followed by the first specified user.
+  api.users.stores(100, callback);  // Retrieves the stores that the specified user is following.
+  api.users.isFollowingStore(100, callback); // Retrieves a specified store if it is followed by the specified user.
+  api.users.searches(100, callback);  // Retrieves the searches that the specified user is following.
+  api.users.followers(100, callback);  // Retrieves the users that are following the specified user.
+  api.users.collections(100, callback);  // Retrieve the specified collection.
+  api.users.collection(100, 200, callback);  // Retrieves the products in a collection.
+
+  api.collections.show(100, callback);  // Retrieve the specified collection.
+  api.collections.find({ "query: "okfocus" }, callback);  // 
+  api.collections.products(100, callback);  // Retrieves the products in a collection.
+  api.collections.users(100, callback);  // Retrieves the users in a collection.
+  api.collections.comments(100, callback);  // Lists the comments on the specified collection.
+
+  api.shop.categories(callback); // Retrieves product categories and their related endpoints. 
+  api.collections.show('Audio', 'Tech', {"query" : "headphones" }, callback);  // Retrieves the products within a category.
+  
+  api.remaining(callback); // Returns the number of API requests remaining.
+
+h3. Run Tests
+
+pre. $ npm test

@@ -1,0 +1,28 @@
+{
+    "name": "svpply",
+    "preferGlobal": "false",
+    "description": "Node.js wrapper for the Svpply API.",
+    "author": "Jonathan Vingiano <j@okfoc.us> (@jgv)",
+    "version": "0.1.0",
+    "main": "./lib/svpply.js",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/jgv/svpply-node.git"
+    },
+    "keywords": [
+        "svpply",
+        "api wrapper"
+    ],
+    "engines": {
+        "node": ">= 0.5.0"
+    },
+    "dependencies": {
+        "request": ">= 1.9.0"
+    },
+    "devDependencies": {
+        "vows": "0.6.x"
+    },
+    "scripts": {
+        "test": "node test/*-test.js"
+    }
+}
