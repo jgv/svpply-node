@@ -1,4 +1,5 @@
-# Svpply
+# Svpply 
+[![Build Status](https://secure.travis-ci.org/jgv/svpply-node.png)](http://travis-ci.org/jgv/svpply-node)
 
 A Node.js wrapper for the [Svpply API](https://developer.svpply.com). Right now there is only coverage for non-authenticated calls, contributions are more than welcome. Check out the Svpply API [docs](https://developer.svpply.com) for very thorough documentation of all the calls.
 
