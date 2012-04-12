@@ -1,6 +1,8 @@
 # Svpply
 
-A Node.js wrapper for the "Svpply API":https://developer.svpply.com. Right now there is only coverage for non-authenticated calls. Check out the Svpply API "docs":https://developer.svpply.com as well.
+A Node.js wrapper for the [Svpply API](https://developer.svpply.com). Right now there is only coverage for non-authenticated calls, contributions are more than welcome. Check out the Svpply API [docs](https://developer.svpply.com) for very thorough documentation of all the calls.
+
+Parts of this wrapper were extracted from [Tug of Store](http://tugofstore.com), an API experiment by [OKFocus](http://okfoc.us).
 
 ## Installation
 
@@ -84,7 +86,7 @@ This interface to the Svpply API is meant to be semantically similar to way Svpp
   api.collections.show(100, callback);  
 
   // Search collections for a specified query.
-  api.collections.find({ "query: "okfocus" }, callback);  
+  api.collections.find({ "query": "okfocus" }, callback);  
 
   // Retrieves the products in a collection.
   api.collections.products(100, callback);  
