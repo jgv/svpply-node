@@ -14,8 +14,7 @@ pre. $ [sudo] npm install svpply
 
 h2. Useage
 
-p. This interface to the Svpply API is meant to be semantically similar to way Svpply's API is organized. There are 4 main categories: Products, Users, Collections, Shop.
-
+p. This interface to the Svpply API is meant to be semantically similar to way Svpply's API is organized.
 <pre class="js">
   var svpply = require('svpply');  // require the svpply
   var api = new svpply();  // setup svpply object
