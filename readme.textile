@@ -16,7 +16,7 @@ h2. Useage
 
 p. This interface to the Svpply API is meant to be semantically similar to way Svpply's API is organized. There are 4 main categories: Products, Users, Collections, Shop.
 
-<pre>
+<pre class="js">
   var svpply = require('svpply');  // require the svpply
   var api = new svpply();  // setup svpply object
 
@@ -52,6 +52,7 @@ p. This interface to the Svpply API is meant to be semantically similar to way S
   
   api.remaining(callback); // Returns the number of API requests remaining.
 
+</pre>
 h3. Run Tests
 
 pre. $ npm test
