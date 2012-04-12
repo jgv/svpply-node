@@ -8,9 +8,11 @@ Parts of this wrapper were extracted from [Tug of Store](http://tugofstore.com),
 
 ### Installing npm (Node Package Manager)
 
-pre. curl http://npmjs.org/install.sh | sh
+```
+curl http://npmjs.org/install.sh | sh
+```
 
-h3. Installing Svpply
+### Installing Svpply
 
 ```
 $ [sudo] npm install svpply
