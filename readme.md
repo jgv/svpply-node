@@ -25,7 +25,7 @@ This interface to the Svpply API is meant to be semantically similar to way Svpp
 
 ``` js
 
-  var svpply = require('svpply');  // require the svpply
+  var svpply = require('svpply');  // require the svpply library
   var api = new svpply();  // setup svpply object
 
   // Retrieves a product object.
@@ -47,7 +47,7 @@ This interface to the Svpply API is meant to be semantically similar to way Svpp
   api.users.show(100, callback);  
 
   // Search users for a specified query.
-  api.users.find({"query" : "jonathan", callback}); 
+  api.users.find({"query" : "jonathan"}, callback); 
 
   // Retrieves the products a user has "wanted".
   api.users.wants(100, callback);  
