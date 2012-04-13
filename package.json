@@ -3,7 +3,7 @@
     "preferGlobal": "false",
     "description": "Node.js wrapper for the Svpply API.",
     "author": "Jonathan Vingiano <j@okfoc.us> (@jgv)",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "./lib/svpply.js",
     "repository": {
         "type": "git",
@@ -23,6 +23,6 @@
         "vows": "0.6.x"
     },
     "scripts": {
-        "test": "node test/*-test.js"
+        "test": "vows test/*-test.js"
     }
 }

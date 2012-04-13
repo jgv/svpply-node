@@ -406,4 +406,4 @@ vows.describe('Test Svpply API Wrapper').addBatch({
             }
         }
     }
-}).run();
+}).export(module);
