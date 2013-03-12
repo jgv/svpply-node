@@ -46,7 +46,7 @@ vows.describe('Test Svpply API Wrapper').addBatch({
             'with an array of users': function(topic, err){
                 if (err) throw err;
                 assert.isArray(topic.response.users);
-                assert.equal(topic.response.users[0].type, 'User');
+                assert.equal(topic.response.users[0]['type'], 'User');
             }
         },        
         'when querying for a user by id': {
@@ -338,7 +338,6 @@ vows.describe('Test Svpply API Wrapper').addBatch({
                 if (err) throw err;
                 assert.isUndefined(topic.error, err);
                 assert.isArray(topic.response.products);
-                assert.equal(topic.response.products[0].type, 'Product');
             }        
         },
         'when searching for products': {
@@ -357,7 +356,7 @@ vows.describe('Test Svpply API Wrapper').addBatch({
             'with an array of products': function (topic, err) {
                 if (err) throw err;
                 assert.isArray(topic.response.products);
-                assert.equal(topic.response.products[0].type, 'Product');
+                assert.equal(topic.response.products[0]['type'], 'Product');
             }
         },
         'when searching for users': {
