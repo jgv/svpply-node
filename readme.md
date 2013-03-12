@@ -19,7 +19,7 @@ curl http://npmjs.org/install.sh | sh
 $ [sudo] npm install svpply
 ```
 
-## Useage
+## Usage
 
 This interface to the Svpply API is meant to be semantically similar to way Svpply's API is organized.
 
