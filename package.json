@@ -20,7 +20,7 @@
         "request": ">= 1.9.0"
     },
     "devDependencies": {
-        "vows": "0.6.x"
+        "vows": "0.7.x"
     },
     "scripts": {
         "test": "vows test/*-test.js"
