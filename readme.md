@@ -25,8 +25,8 @@ This interface to the Svpply API is meant to be semantically similar to way Svpp
 
 ``` js
 
-  var svpply = require('svpply').API;  // require the svpply library
-  var api = new svpply();  // setup svpply object
+  var svpply = require('svpply');  // require the svpply library
+  var api = new svpply.API();  // setup svpply object
 
   // Retrieves a product object.
   api.products.show(100, callback); 
