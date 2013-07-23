@@ -391,6 +391,51 @@ vows.describe('Test Svpply API Wrapper').addBatch({
                 assert.equal(topic.response.collections[0].type, 'Collection');
             }
         },
+        'when searching for a store': {
+            topic: function () {
+                api.stores.show(1, this.callback);
+            },
+            'an object will be returned': function(topic, err){
+                if (err) throw err;
+                assert.isObject(topic);
+            },
+            'with the right id': function (topic, err) {
+                assert.isUndefined(topic.error, err);
+                assert.equal(topic.response.store.id, 1);
+            },
+            'with the type store': function (topic, err) {
+                assert.isUndefined(topic.error, err);
+                assert.equal(topic.response.store.type, 'Store');
+            }
+        },
+        'when searching for products in a store': {
+            topic: function () {
+                api.stores.products(1, this.callback);
+            },
+            'an object will be returned': function(topic, err){
+                if (err) throw err;
+                assert.isObject(topic);
+            },
+            'with an array of products': function (topic, err) {
+              if (err) throw err;
+              assert.isArray(topic.response.products);
+              assert.equal(topic.response.products[0].type, 'Product');
+            }
+        },
+        'when searching for followers of a store': {
+            topic: function () {
+                api.stores.followers(1, this.callback);
+            },
+            'an object will be returned': function(topic, err){
+                if (err) throw err;
+                assert.isObject(topic);
+            },
+            'with an array of users': function (topic, err) {
+              if (err) throw err;
+              assert.isArray(topic.response.users);
+              assert.equal(topic.response.users[0].type, 'User');
+            }
+        },
         'when checking rate limit': {
             topic: function () {
                 api.remaining(this.callback);
