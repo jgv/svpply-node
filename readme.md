@@ -104,8 +104,17 @@ This interface to the Svpply API is meant to be semantically similar to way Svpp
   api.shop.categories(callback); 
 
   // Retrieves the products within a category.
-  api.collections.show('Audio', 'Tech', {"query" : "headphones" }, callback);  
-  
+  api.collections.show('Audio', 'Tech', {"query" : "headphones" }, callback);
+
+  // Retrieves the store object.
+  api.stores.show(1, callback);
+
+  // Retrieves the products of a shop.
+  api.stores.products(1, callback);
+
+  // Retrieves the followers of a shop.
+  api.stores.followers(1, callback);
+
   // Returns the number of API requests remaining.
   api.remaining(callback); 
 
